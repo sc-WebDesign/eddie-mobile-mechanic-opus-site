@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f7f6f5;
+  --color-brand-100: #eeecea;
+  --color-brand-200: #dbd7d3;
+  --color-brand-300: #b6afa8;
+  --color-brand-400: #8a817a;
+  --color-brand-500: #6b625b;
+  --color-brand-600: #554e48;
+  --color-brand-700: #453f3a;
+  --color-brand-800: #38332f;
+  --color-brand-900: #2d2926;
+  --color-brand-950: #191614;
+
+  --color-accent-50: #eff7ff;
+  --color-accent-100: #dbedfe;
+  --color-accent-200: #bfe0fe;
+  --color-accent-300: #93cefd;
+  --color-accent-400: #4da3fb;
+  --color-accent-500: #2f8fff;
+  --color-accent-600: #1a72e8;
+  --color-accent-700: #175bbd;
+  --color-accent-800: #184e9b;
+  --color-accent-900: #19437f;
+  --color-accent-950: #112a4e;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-body: "Titillium Web", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent-500 px-6 py-3.5 font-bold text-white transition hover:bg-accent-600 focus:outline-none focus:ring-4 focus:ring-accent-300;
+  }
+  .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-brand-300 px-6 py-3.5 font-bold text-brand-800 transition hover:border-accent-500 hover:text-accent-700 focus:outline-none focus:ring-4 focus:ring-accent-100;
+  }
+  .btn-dark-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-brand-200/40 px-6 py-3.5 font-bold text-brand-100 transition hover:border-accent-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-brand-700;
+  }
+  .section-eyebrow {
+    @apply mb-3 inline-block text-xs font-bold uppercase tracking-[0.25em] text-accent-700;
+  }
+  .card {
+    @apply rounded-lg bg-white p-6 shadow-sm ring-1 ring-brand-100;
+  }
+  .js-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .social-btn {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-md border-2 border-brand-200/40 text-brand-100 transition hover:border-accent-400 hover:text-white;
+  }
+  .social-btn-light {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-md border-2 border-brand-300 text-brand-700 transition hover:border-accent-500 hover:text-accent-700;
+  }
+
+  /* Callout job card */
+  .jobcard {
+    position: relative;
+    background: linear-gradient(180deg, #fffefb 0%, #f6f3ec 100%);
+    border-radius: 4px;
+    box-shadow: 0 22px 44px rgba(25, 22, 20, 0.45);
+    color: #191614;
+    overflow: hidden;
+  }
+  .jobcard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background:
+      radial-gradient(circle at 8px 0, transparent 0 6px, #fffefb 7px) 0 0 / 16px 8px repeat-x;
+    filter: drop-shadow(0 1px 0 rgba(25, 22, 20, 0.08));
+  }
+  .jobcard-head {
+    @apply flex items-center justify-between gap-3 border-b-2 border-dashed border-brand-300 px-6 pb-3 pt-7;
+  }
+  .jobcard-row {
+    @apply flex items-baseline gap-3 border-b border-dotted border-brand-200 px-6 py-3;
+  }
+  .jobcard-label {
+    @apply w-20 shrink-0 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-500;
+  }
+  .jobcard-value {
+    @apply font-display text-lg leading-tight;
+  }
+  .stamp {
+    @apply inline-block font-display text-sm uppercase tracking-widest;
+    transform: rotate(-6deg);
+    color: #1a72e8;
+    border: 3px solid #1a72e8;
+    border-radius: 6px;
+    padding: 6px 12px;
+    opacity: 0.85;
+  }
+
+  /* 24 hour bar */
+  .hour-bar {
+    @apply flex overflow-hidden rounded-full ring-1 ring-brand-700;
+  }
+  .hour-cell {
+    @apply flex-1;
+    height: 22px;
+    background: linear-gradient(180deg, #2f8fff 0%, #175bbd 100%);
+    border-right: 1px solid rgba(25, 22, 20, 0.35);
+  }
+  .hour-cell:last-child { border-right: 0; }
+
+  /* Skip cards */
+  .skip-card {
+    @apply relative rounded-lg bg-white p-6 pt-8 shadow-sm ring-1 ring-brand-100;
+  }
+  .skip-mark {
+    @apply absolute -top-4 left-6 flex h-9 w-9 items-center justify-center rounded-full bg-accent-500 font-display text-base text-white shadow;
+  }
+
+  .photo-frame {
+    @apply relative overflow-hidden rounded-xl bg-brand-200 ring-1 ring-brand-950/10;
+  }
+  .photo-frame img {
+    @apply h-full w-full object-cover;
+  }
+  .photo-tag {
+    @apply absolute left-3 top-3 rounded-md bg-brand-950/85 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-50 backdrop-blur;
+  }
+  .photo-note {
+    @apply mt-2 text-xs text-brand-500;
+  }
+  .strip-frame {
+    @apply relative overflow-hidden bg-brand-950;
+  }
+  .strip-frame img {
+    @apply h-full w-full object-cover object-[center_60%];
+  }
+}
