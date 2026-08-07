@@ -7,7 +7,7 @@ page says so in plain words rather than leaving it implied.
 | File | Photographer | Source |
 |---|---|---|
 | `jump-start.jpg` | Daniel (bestjumpstarterreview.com) | https://www.pexels.com/photo/5572275/ |
-| `brake-disc.jpg` | Gustavo Fring | https://www.pexels.com/photo/6870299/ |
+| `brake-job.jpg` | Phe Di Monaco | https://www.pexels.com/photo/31040178/ |
 | `toolkit.jpg` | Andrea Piacquadio | https://www.pexels.com/photo/3855223/ |
 
 ## What was rejected, and why
@@ -26,3 +26,5 @@ original. Rejections worth recording, because the alt text hid every one of them
   Every job in Eddie's reviews is a car job.
 - **A workshop interior with a car on a ramp.** Contradicts the entire premise.
 - Supercars, a US-style house at dusk, a meeting room, a driver at the wheel.
+
+**Phase three (7 Aug 2026):** the previous brake frame (6870299) shared its shoot with Kobani's; Kobani keeps it because that set's garage-and-lift context is Kobani's actual premises, while this build is a MOBILE mechanic. The new frame is a brake job over domestic tiles with the tools on the ground, which is what the caption beside it has claimed all along.
